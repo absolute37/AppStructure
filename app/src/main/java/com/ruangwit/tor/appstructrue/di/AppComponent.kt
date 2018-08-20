@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.ruangwit.tor.appstructrue.di.module.ActivityModule
 import com.ruangwit.tor.appstructrue.di.module.AppModule
-import com.ruangwit.tor.appstructrue.repo.room.DatabaseModule
+import com.ruangwit.tor.appstructrue.di.module.DatabaseModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule

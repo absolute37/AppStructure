@@ -1,8 +1,9 @@
-package com.ruangwit.tor.appstructrue.repo.room
+package com.ruangwit.tor.appstructrue.di.module
 
 import android.app.Application
 import android.arch.persistence.room.Room
 import com.ruangwit.tor.appstructrue.api.db.UserDao
+import com.ruangwit.tor.appstructrue.repo.room.DatabaseManager
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
