@@ -25,6 +25,7 @@ android {
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
     }
+
 }
 
 dependencies {
@@ -55,12 +56,12 @@ dependencies {
     implementation 'com.google.dagger:dagger-android:2.16'
     implementation 'com.google.dagger:dagger-android-support:2.16'
 
-
+    //Room
     def room_version = "1.1.1"
-
     implementation "android.arch.persistence.room:runtime:$room_version"
-    annotationProcessor "android.arch.persistence.room:compiler:$room_version" // use kapt for Kotlin
-
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    // use kapt for Kotlin
+    kapt "android.arch.persistence.room:compiler:$room_version"
 
     //Hawk
     implementation "com.orhanobut:hawk:2.0.1"

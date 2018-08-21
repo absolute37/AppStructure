@@ -6,6 +6,7 @@ import com.ruangwit.tor.appstructrue.core.AppStructureActivity
 import com.ruangwit.tor.appstructrue.ui.acvitity.viewmodel.MainViewModel
 import com.ruangwit.tor.appstructrue.ui.fragment.view.LoginFragment
 import com.ruangwit.tor.common.extensions.addFragment
+import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
 import java.util.concurrent.TimeUnit
@@ -42,10 +43,8 @@ class MainActivity : AppStructureActivity() {
 
     override fun setup() {
         mainViewModel = bindViewModel(MainViewModel::class.java)
-        launch {
-            delay(2, TimeUnit.SECONDS)
-            addFragment(supportFragmentManager, R.id.container_layout, LoginFragment.newInstance())
-        }
+        addFragment(supportFragmentManager, R.id.container_layout, LoginFragment.newInstance())
+
     }
 
 

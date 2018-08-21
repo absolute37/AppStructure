@@ -9,9 +9,9 @@ import java.text.StringCharacterIterator
 
 
 @Database(entities = [User::class],
-        version = 3)
-
-@TypeConverters(StringCharacterIterator::class)
+        version = 3,
+        exportSchema = false
+)
 abstract class DatabaseManager : RoomDatabase() {
 
     abstract fun userDao(): UserDao

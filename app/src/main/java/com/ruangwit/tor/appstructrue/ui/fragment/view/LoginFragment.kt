@@ -1,19 +1,25 @@
 package com.ruangwit.tor.appstructrue.ui.fragment.view
 
-
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 import com.ruangwit.tor.appstructrue.R
 import com.ruangwit.tor.appstructrue.core.AppStructureFragment
 import com.ruangwit.tor.appstructrue.ui.fragment.viewmodel.LoginViewModel
+import com.ruangwit.tor.appstructrue.vo.User
+import com.ruangwit.tor.appstructrue.vo.core.Resource
+import com.ruangwit.tor.common.extensions.toast
 import kotlinx.android.synthetic.main.login_activity.edt_username as edtUserName
 import kotlinx.android.synthetic.main.login_activity.edt_password as edtPassword
 import kotlinx.android.synthetic.main.login_activity.btn_login as btnLogin
 import javax.inject.Inject
+import kotlin.math.log
 
 class LoginFragment @Inject constructor() : AppStructureFragment() {
     lateinit var loginViewModel: LoginViewModel
+
 
     companion object {
         fun newInstance(): Fragment = LoginFragment()
@@ -37,6 +43,7 @@ class LoginFragment @Inject constructor() : AppStructureFragment() {
 
     override fun initialize() {
 
+
     }
 
     override fun restoreInstanceState(savedInstanceState: Bundle?) {
@@ -49,7 +56,6 @@ class LoginFragment @Inject constructor() : AppStructureFragment() {
 
     override fun setup() {
         loginViewModel = bindViewModel(LoginViewModel::class.java)
-
 
     }
 
